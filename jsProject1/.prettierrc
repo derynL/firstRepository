@@ -1,4 +1,6 @@
 {
   "singleQuote": true,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "htmlWhitespaceSensitivity": "css",
+  "semi": true
 }
