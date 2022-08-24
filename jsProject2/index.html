@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Out of this World Travel</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        height: 100vh;
+        color: rgb(232, 230, 230);
+        background-image: linear-gradient(
+          to top left,
+          #bee9ff 0%,
+          #48bcffe6 100%
+        );
+        /* display: flex; */
+        align-items: center;
+        justify-content: center;
+      }
+
+      main {
+        position: relative;
+      }
+
+      div {
+        position: inherit;
+        margin: auto;
+      }
+
+      input[type="text"] {
+        position: absolute;
+        top: 1.5rem;
+        left: 50%;
+        text-align: center;
+        transform: translateX(-50%);
+        color: #444;
+        background: none;
+        border: none;
+        font-family: inherit;
+        font-size: 1.8rem;
+        cursor: pointer;
+        font-weight: 400;
+        transition: all 0.2s;
+        background-color: white;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        padding: 0.7rem 2.5rem;
+        border-radius: 25rem;
+        box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+      }
+
+      #submitName {
+        position: absolute;
+        top: 6rem;
+        left: 50%;
+        text-align: center;
+        color: bisque;
+        transform: translateX(-50%);
+        font-family: inherit;
+        padding: 5px 15px;
+        background: rgb(45, 44, 44);
+        border: 0 none;
+        cursor: pointer;
+        padding: 0.7rem 2.5rem;
+        border-radius: 25rem;
+        box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        position: inherit;
+        top: 10rem;
+        text-align: center;
+        font-family: inherit;
+        color: rgb(73, 73, 73);
+      }
+
+      h2 {
+        position: inherit;
+        top: 11rem;
+        text-align: center;
+        font-family: inherit;
+        color: rgb(32, 32, 32);
+      }
+
+      #mars {
+        display: none;
+        width: 850px;
+        padding: 9rem;
+        transition: all 0.75s;
+      }
+      #venus {
+        display: none;
+        width: 850px;
+        padding: 9rem;
+        transition: all 0.75s;
+      }
+      #saturn {
+        display: none;
+        width: 850px;
+        padding: 9rem;
+        transition: all 0.75s;
+      }
+      #moon {
+        display: none;
+        width: 850px;
+        padding: 9rem;
+        transition: all 0.75s;
+      }
+      #horsehead {
+        display: none;
+        width: 850px;
+        padding: 9rem;
+        transition: all 0.75s;
+      }
+      #going-nowhere {
+        display: none;
+        width: 850px;
+        padding: 9rem;
+        transition: all 0.75s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div id="user-input">
+        <input type="text" id="visitor" placeholder="Enter your name" />
+        <button type="button" id="submitName" onclick="getName()">
+          SUBMIT
+        </button>
+      </div>
+      <div id="messages">
+        <h1 id="greeting"></h1>
+        <h2 class="outcome" id="winner-message"></h2>
+        <h2 class="outcome" id="no-win"></h2>
+      </div>
+      <div id="images">
+        <p id="image-display">
+          <img id="mars" src="images/mars.jpg" alt="Mars" width="800" />
+          <img id="venus" src="images/venus.jpg" alt="Venus" width="800" />
+          <img id="saturn" src="images/saturn.jpg" alt="Saturn" width="800" />
+          <img id="moon" src="images/moon.jpeg" alt="The Moon" width="800" />
+          <img
+            id="horsehead"
+            src="images/horsehead.jpg"
+            alt="Horsehead Nebula"
+            width="800"
+          />
+          <img
+            id="going-nowhere"
+            src="images/going-nowhere.jpg"
+            alt="Nowhere"
+            width="800"
+          />
+        </p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
