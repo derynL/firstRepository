@@ -1,11 +1,11 @@
 'use strict';
-const answers = [
+const answerArr = [
   'Sure, why not',
   'It is decidedly so',
   'Certain as a wombat is to beep...',
   'Now is not the right time.',
-  'Puffadder error. Please try again later.',
-  'Mayhep...',
+  'Puffadders in session. Please try again later.',
+  'Evidently...',
   'Reasonable chance',
   'Outlook good',
   'First appease the Great Spider Gods',
@@ -22,19 +22,20 @@ const answers = [
   'Concentrate and ask again',
 ];
 
-window.onload = function () {
-  let eight = document.getElementById('eight');
-  let answer = document.getElementById('answer');
-  let eightball = document.getElementById('eight-ball');
-  let question = document.getElementById('question');
+let eight = document.getElementById('eight');
+let answer = document.getElementById('answer');
+let eightball = document.getElementById('eight-ball');
+let question = document.getElementById('question');
 
+window.onload = function () {
   eightball.addEventListener('click', function () {
     if (question.length < 1) {
       alert('Enter a question!');
     } else {
+      let num = Math.floor(Math.random() * Math.floor(answerArr.length));
+      let txt = answerArr[num];
       eight.innerText = '';
-      let num = Math.floor(Math.random() * Math.floor(answers.length));
-      answer.innerText = answers[num];
+      answer.innerText = txt;
     }
   });
 };
